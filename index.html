@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DiceBear Avatar Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel controls-panel">
+        <div class="eyebrow">DiceBear API</div>
+        <h1>Avatar Generator</h1>
+
+        <label for="styleSelect">Avatar style</label>
+        <select id="styleSelect">
+          <option value="adventurer">Adventurer</option>
+          <option value="avataaars">Avataaars</option>
+          <option value="bottts">Bottts</option>
+          <option value="initials">Initials</option>
+          <option value="lorelei">Lorelei</option>
+          <option value="micah">Micah</option>
+          <option value="miniavs">Miniavs</option>
+          <option value="notionists">Notionists</option>
+          <option value="open-peeps">Open Peeps</option>
+          <option value="pixel-art">Pixel Art</option>
+        </select>
+
+        <label for="seedInput">Seed / Name</label>
+        <input id="seedInput" type="text" value="demo-user" maxlength="40" />
+
+        <div class="button-row">
+          <button id="generateBtn" type="button">Generate</button>
+          <button id="randomBtn" type="button" class="secondary">Random</button>
+        </div>
+
+        <div class="api-box">
+          <span>Endpoint</span>
+          <code id="endpointText">https://api.dicebear.com/10.x/bottts/svg?seed=demo-user</code>
+        </div>
+      </section>
+
+      <section class="panel preview-panel">
+        <div class="preview-card">
+          <img id="avatarPreview" alt="Generated avatar" />
+        </div>
+        <div class="meta-row">
+          <div>
+            <small>Style</small>
+            <strong id="styleLabel">bottts</strong>
+          </div>
+          <div>
+            <small>Seed</small>
+            <strong id="seedLabel">demo-user</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
